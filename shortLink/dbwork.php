@@ -19,9 +19,9 @@ class DataBase
     public function __construct()
     {
 
-        $this->db = new PDO('mysql:host=localhost; 
-                               dbname=shortLink; 
-                               charset=utf8', $this->db_login, $this->db_password);
+        $this->db = new PDO("mysql:host=localhost; 
+                               dbname={$this->db_name}; 
+                               charset=utf8", $this->db_login, $this->db_password);
         //проверяем, сеществует ли таблица
         if(!$this->ifExist($this->db)){
             $this->db->query("CREATE TABLE links (id INT AUTO_INCREMENT PRIMARY KEY,
