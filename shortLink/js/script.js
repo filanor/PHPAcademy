@@ -25,7 +25,7 @@ window.addEventListener( 'DOMContentLoaded', ()=>{
     });
 
     function openModal(message){
-        alert(message);
+        // alert(message);
         modal.style.display = "block";
         rezBlock.textContent = message;
 
